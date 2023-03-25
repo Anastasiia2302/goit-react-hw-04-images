@@ -34,7 +34,7 @@ export const App = () => {
       setTotalHits(response.totalHits);
       setIsLoading(false);
     });
-  }, [search, page,showBtn]);
+  }, [search, page,showBtn, totalHits]);
 
   const handleSearch = text => {
     setSearch(text);
