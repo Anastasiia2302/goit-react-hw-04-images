@@ -15,7 +15,8 @@ const handleKeyDown = e => {
 
 
 const handleBackdropClick = e => {
-  if(e.currentTarget !== e.target) closeModal()
+  
+  if(e.currentTarget === e.target) closeModal()
 }
 
 useEffect(() => {
@@ -24,7 +25,7 @@ useEffect(() => {
   return () => {
     window.removeEventListener('keydown', handleKeyDown)
   }
-}, [handleKeyDown, handleBackdropClick])
+}, [])
 
 
 

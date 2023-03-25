@@ -4,8 +4,8 @@ import { Searchbar } from './Searchbar/Searchbar';
 import { Loader } from './Loader/Loader';
 import { ImageGallery } from './ImageGallery/ImageGallery';
 import { Button } from './Button/Button';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect  } from 'react';
+
 
 export const App = () => {
   const [search, setSearch] = useState('');
