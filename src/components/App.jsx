@@ -11,7 +11,7 @@ export const App = () => {
   const [search, setSearch] = useState('');
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
-  const [totalHits, setTotalHits] = useState(0);
+  // const [totalHits, setTotalHits] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [showBtn, setShowBtn] = useState(false)
   
@@ -29,7 +29,7 @@ export const App = () => {
 
       setImages(prevState =>[...prevState, ...response.hits]);
       setShowBtn(page < Math.ceil(response.totalHits / 12));
-      setTotalHits(response.totalHits);
+      // setTotalHits(response.totalHits);
       setIsLoading(false);
     });
   }, [search, page]);
