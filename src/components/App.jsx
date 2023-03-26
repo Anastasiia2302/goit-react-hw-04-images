@@ -27,9 +27,7 @@ export const App = () => {
         return;
       }
 
-      setImages(prevState =>
-        page === 1 ? response.hits : [...prevState, ...response.hits]
-      );
+      setImages(prevState =>[...prevState, ...response.hits]);
       setShowBtn(page < Math.ceil(response.totalHits / 12));
       setTotalHits(response.totalHits);
       setIsLoading(false);
