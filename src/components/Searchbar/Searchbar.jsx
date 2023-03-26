@@ -1,4 +1,4 @@
-import { AiOutlineSearch } from 'react-icons/ai';
+// import { AiOutlineSearch } from 'react-icons/ai';
 import { ToastContainer, toast } from 'react-toastify';
 import {
   SearchBar,
@@ -29,7 +29,7 @@ return (
   <SearchBar>
     <SearchForm onSubmit={handleSubmit}>
       <SearchButton type='submit'>
-      <AiOutlineSearch size="2rem" />
+      {/* <AiOutlineSearch size="2rem" /> */}
       </SearchButton>
       <SearchInput
            value={query}
