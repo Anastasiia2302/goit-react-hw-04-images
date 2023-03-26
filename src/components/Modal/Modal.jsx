@@ -8,24 +8,23 @@ const modalRoot = document.getElementById('modal');
 export const Modal = ({closeModal, tags, modalImg}) => {
 
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
-const handleKeyDown = e => {
-  if (e.key === 'Escape') closeModal()
-}
-
-
-const handleBackdropClick = e => {
+  const handleBackdropClick = e => {
   
-  if(e.currentTarget === e.target) closeModal()
-}
-
-useEffect(() => {
-  window.addEventListener('keydown', handleKeyDown)
-
-  return () => {
-    window.removeEventListener('keydown', handleKeyDown)
+    if(e.currentTarget === e.target) closeModal()
   }
-}, [handleKeyDown])
+  
+  useEffect(() => {
+  const handleKeyDown = e => {
+    if (e.key === 'Escape') closeModal()
+  }
+    window.addEventListener('keydown', handleKeyDown)
+  
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [closeModal])
+
+
 
 
 
